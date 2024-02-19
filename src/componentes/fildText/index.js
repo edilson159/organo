@@ -4,7 +4,7 @@ const FildText = () => {
     return (
         <div className="fild-text">
             <label>Nome</label>
-            <input />
+            <input placeholder="Digiti o seu nome" />
         </div>
     )
 }
