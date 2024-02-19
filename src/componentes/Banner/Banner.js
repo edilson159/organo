@@ -1,10 +1,10 @@
 import './Banner.css'
 
-function Banner() {
+export const Banner = () => {
     //JSX
     return(
-        <header className='banner'><img src="\imagens\banner.png" alt="Banner principal do Organo"></img></header>
+        <header className='banner'><img src="\imagens\banner.png" alt="Banner principal do Organo"></img>
+        </header>
     )
 }
 
-export default Banner
