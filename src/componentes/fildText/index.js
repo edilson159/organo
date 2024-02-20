@@ -1,10 +1,12 @@
 import "./fildText.css";
 
-const FildText = () => {
+const FildText = (props) => {
     return (
         <div className="fild-text">
-            <label>Nome</label>
-            <input placeholder="Digiti o seu nome" />
+            <label>
+                {props.label}
+            </label>
+            <input placeholder={props.placeholder} />
         </div>
     )
 }

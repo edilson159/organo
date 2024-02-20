@@ -1,5 +1,5 @@
 import Banner from './componentes/Banner';
-import FildText from './componentes/fildText/index.js';
+import Forms from './componentes/Forms'
 
 
 
@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <Banner />
-      <FildText/>
+      <Forms/>
     </div>
   );
 }
