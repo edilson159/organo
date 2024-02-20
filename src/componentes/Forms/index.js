@@ -21,7 +21,7 @@ const form = () => {
                <FildText label='Nome' placeholder='Digite o seu nome'/>
                <FildText label='Cargo' placeholder='Digite o seu cargo'/>
                <FildText label='Imagem' placeholder='Informe o endereço da imagem'/>
-               <DropDownList itens={times}/>
+               <DropDownList label='Time' itens={times}/>
             </form>
         </section>
     )

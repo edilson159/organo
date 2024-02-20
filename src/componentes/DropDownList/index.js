@@ -3,11 +3,11 @@ import './DropDownList.css'
 const dropDownList = (props) => {
     console.log(props.itens);
     return (
-        <div>
-            <label>
+        <div className='list'>
+            <label  >
                 {props.label}
             </label>
-            <select>
+            <select >
                 {props.itens.map(item => {
                     return <option key={item}>{item}</option>
                  })}
