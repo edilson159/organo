@@ -1,0 +1,22 @@
+.buton {
+    background: #6278F7;
+    width: 167px;
+    height: 80px;
+    top: 1313px;
+    left: 255px;
+    border-radius: 10px;
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    
+}
+
+.buton:hover {
+    color: #95ffd4;
+}
+

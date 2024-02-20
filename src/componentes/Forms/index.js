@@ -1,6 +1,7 @@
 import FildText from '../fildText'
 import './form.css'
 import DropDownList from '../DropDownList'
+import Button from '../Button'
 
 const form = () => {
     
@@ -22,6 +23,7 @@ const form = () => {
                <FildText label='Cargo' placeholder='Digite o seu cargo'/>
                <FildText label='Imagem' placeholder='Informe o endereço da imagem'/>
                <DropDownList label='Time' itens={times}/>
+               <Button texto="Criar Card"/>
             </form>
         </section>
     )
