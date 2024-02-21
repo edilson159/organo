@@ -14,19 +14,20 @@ const form = () => {
         'Mobile',
         'Inovação e Gestão'
     ]
-
-const whenSaving = () => {
-    console.log("Form foi submetido");
-}
     
+    const whenSaving = (event) => {
+        event.preventDefault()
+        console.log("Form foi submetido");
+    }
+
     return (
         <section className='formC'>
             <form onSubmit={whenSaving}>
                 <h2>Preencha os dados para criar o card do colaborador</h2>
-               <FildText label='Nome' placeholder='Digite o seu nome'/>
-               <FildText label='Cargo' placeholder='Digite o seu cargo'/>
+               <FildText obrigatorio={true} label='Nome' placeholder='Digite o seu nome'/>
+               <FildText obrigatorio={true} label='Cargo' placeholder='Digite o seu cargo'/>
                <FildText label='Imagem' placeholder='Informe o endereço da imagem'/>
-               <DropDownList label='Time' itens={times}/>
+               <DropDownList obrigatorio={true} label='Time' itens={times}/>
                <Button>
                 Criar Card
                </Button>
