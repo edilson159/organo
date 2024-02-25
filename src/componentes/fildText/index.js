@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./fildText.css";
 
 const FildText = (props) => {
-    const placeholderModifiqued = `${props.placeholder}...`
+    //const placeholderModifiqued = `${props.placeholder}...`
 
     //let valuee = 'Edilson Silva'
 
@@ -17,7 +17,7 @@ const FildText = (props) => {
             <label>
                 {props.label}
             </label>
-            <input value={valuee} onChange={toTyped} required={props.obrigatorio} placeholder={props.placeholder} />
+            <input valuee={valuee} onChange={toTyped} required={props.obrigatorio} placeholder={props.placeholder} />
         </div>
     )
 }
