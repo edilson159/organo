@@ -6,6 +6,45 @@ import Time from './componentes/Time';
 
 
 function App() {
+
+  const times = [
+    {
+      nome:'Programação',
+      primaryColor:'#57c278',
+      secondaryColor:'#b2f5d5',
+    },
+    {
+      nome:'Front-End',
+      primaryColor:'#82CFFA',
+      secondaryColor:'#E8F8FF',
+    },
+    {
+      nome:'Data Science',
+      primaryColor:'#A6D157',
+      secondaryColor:'#FOF8E2',
+    },
+    {
+      nome:'Devops',
+      primaryColor:'#EO6B69',
+      secondaryColor:'#FD7E8',
+    },
+    {
+      nome:'Ux e Design',
+      primaryColor:'#DB6EBF',
+      secondaryColor:'#FAE9F5',
+    },
+    {
+      nome:'Mobile',
+      primaryColor:'#FFBAO5',
+      secondaryColor:'#FFF5D9',
+    },
+    {
+      nome:'Inovação e Gestão',
+      primaryColor:'#FF8A29',
+      secondaryColor:'#FFEEDF',
+    }
+  ]
+
   const [collaborators, setCollaborators] = useState([])
 
   const toNewCollaboratorAdd = (collaborator) => {
@@ -16,13 +55,9 @@ function App() {
     <div className="App">
       <Banner />
       <Forms toTheRegisteredEmployee={collaborator => toNewCollaboratorAdd(collaborator)} />
-      <Time nome="Programação"/>
-      <Time nome="Front-End"/>
-      <Time nome="Data Science"/>
-      <Time nome="Devops"/>
-      <Time nome="Ux e Design"/>
-      <Time nome="Mobile"/>
-      <Time nome="Inovação e Gestão"/>
+
+      {times.map(time => <Time key={time.nome} nome={time.nome} primaryColor={time.primaryColor} secondaryColor={time.secondaryColor}/> )}
+      
     </div>
   );
 }
