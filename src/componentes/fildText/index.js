@@ -6,7 +6,7 @@ const FildText = (props) => {
 
     //let valuee = 'Edilson Silva'
 
-    const [valuee, setValuee] = useState(' Edilson Silva')
+    //const [valuee, setValuee] = useState(' Edilson Silva')
 
     const toTyped = (event) => {
         props.toAltered(event.target.value)
@@ -17,7 +17,7 @@ const FildText = (props) => {
             <label>
                 {props.label}
             </label>
-            <input valuee={valuee} onChange={toTyped} required={props.obrigatorio} placeholder={props.placeholder} />
+            <input value={props.valor} onChange={toTyped} required={props.obrigatorio} placeholder={props.placeholder} />
         </div>
     )
 }

@@ -4,7 +4,8 @@ import DropDownList from '../DropDownList'
 import Button from '../Button'
 import { useState } from 'react'
 
-const Form = () => {
+
+const Form = (props) => {
     
     const times = [
         'Programação',
@@ -21,10 +22,17 @@ const Form = () => {
     const [cargo, setCargo] = useState('')
 
     const[imagem, setImagem] = useState('')
+
+    const [time, setTime] = useState('')
     
     const whenSaving = (event) => {
         event.preventDefault()
-        console.log("Form foi submetido =>", nome, cargo, imagem);
+        props.toTheRegisteredEmployee({
+            nome,
+            cargo,
+            imagem,
+            time
+        })
     }
 
     return (
@@ -55,6 +63,8 @@ const Form = () => {
                obrigatorio={true} 
                label='Time' 
                itens={times}
+               valuee={time}
+               toAltered={valuee => setTime(valuee)}
                />
                <Button>
                 Criar Card
