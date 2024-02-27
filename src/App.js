@@ -56,7 +56,13 @@ function App() {
       <Banner />
       <Forms times={times.map(time => time.nome)} toTheRegisteredEmployee={collaborator => toNewCollaboratorAdd(collaborator)} />
 
-      {times.map(time => <Time key={time.nome} nome={time.nome} primaryColor={time.primaryColor} secondaryColor={time.secondaryColor}/> )}
+      {times.map(time => <Time 
+      key={time.nome} 
+      nome={time.nome} 
+      primaryColor={time.primaryColor} 
+      secondaryColor={time.secondaryColor}
+      collaborators={collaborators}
+      /> )}
       
     </div>
   );
