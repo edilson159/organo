@@ -1,3 +1,4 @@
+import CardCollaborator from "../Collaborator";
 import "./Time.css";
 
 const Time = (props) => {
@@ -9,6 +10,7 @@ const Time = (props) => {
     return (
         <section className="time" style={color}>
             <h3 style={border}>{props.nome}</h3>
+            <CardCollaborator />
         </section>
     )
 }

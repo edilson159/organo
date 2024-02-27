@@ -7,15 +7,6 @@ import { useState } from 'react'
 
 const Form = (props) => {
     
-    const times = [
-        'Programação',
-        'Front-End',
-        'Data Science',
-        'Devops',
-        'Ux e Design',
-        'Mobile',
-        'Inovação e Gestão'
-    ]
 
     const [nome, setNome] = useState('')
 
@@ -62,7 +53,7 @@ const Form = (props) => {
                <DropDownList 
                obrigatorio={true} 
                label='Time' 
-               itens={times}
+               itens={props.times}
                valuee={time}
                toAltered={valuee => setTime(valuee)}
                />
