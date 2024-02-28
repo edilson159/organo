@@ -61,7 +61,7 @@ function App() {
       nome={time.nome} 
       primaryColor={time.primaryColor} 
       secondaryColor={time.secondaryColor}
-      collaborators={collaborators}
+      collaborators={collaborators.filter(collaborator => collaborator.time === time.nome)}
       /> )}
       
     </div>
