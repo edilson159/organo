@@ -12,7 +12,12 @@ const Time = (props) => {
             <h3 style={border}>{props.nome}</h3>
             <div className="collaborators">
         {props.collaborators.map(Collaborator => {
-            return < CardCollaborator key={Collaborator.nome} nome={Collaborator.nome} cargo={Collaborator.cargo} imagem={Collaborator.imagem} toDelted={toDelted}/>
+            return < CardCollaborator 
+            key={Collaborator.nome} 
+            nome={Collaborator.nome} 
+            cargo={Collaborator.cargo} 
+            imagem={Collaborator.imagem} 
+            toDeleted={props.toDeleted}/>
             
         })}
             </div>

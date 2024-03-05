@@ -51,6 +51,11 @@ function App() {
     console.log(collaborator);
     setCollaborators([...collaborators, collaborator])
   }
+
+  function deletedCollaborator () {
+    console.log('Deletando colaborador')
+}
+
   return (
     <div className="App">
       <Banner />
@@ -62,6 +67,7 @@ function App() {
       primaryColor={time.primaryColor} 
       secondaryColor={time.secondaryColor}
       collaborators={collaborators.filter(collaborator => collaborator.time === time.nome)}
+      toDeleted={deletedCollaborator}
       /> )}
       <Footer/>
     </div>

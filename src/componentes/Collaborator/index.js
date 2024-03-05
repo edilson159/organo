@@ -3,6 +3,7 @@ import './Collaborator.css'
 const CardCollaborator = (props) => { 
     return (
         <div className='collaborator'>
+            <div className='delete' onClick={props.toDeleted}>Deletar</div>
             <div className='header'>
                 <img src={props.imagem} alt={props.nome}/>
             </div>
@@ -16,3 +17,4 @@ const CardCollaborator = (props) => {
 }
 
 export default CardCollaborator 
+
