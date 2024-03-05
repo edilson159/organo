@@ -4,7 +4,7 @@ import './Collaborator.css'
 const CardCollaborator = (props) => { 
     return (
         <div className='collaborator'>
-            <AiFillCloseCircle className='delete' onClick={props.toDeleted} />
+            <AiFillCloseCircle size={25} className='delete' onClick={props.toDeleted} />
             <div className='header'>
                 <img src={props.imagem} alt={props.nome}/>
             </div>

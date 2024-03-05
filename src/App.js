@@ -7,7 +7,7 @@ import Footer from './componentes/footer'
 
 function App() {
 
-  const times = [
+  const [times, setTimes] = useState( [
     {
       nome:'Programação',
       primaryColor:'#57c278',
@@ -43,7 +43,7 @@ function App() {
       primaryColor:'#FF8A29',
       secondaryColor:'#FFEEDF',
     }
-  ]
+  ])
 
   const [collaborators, setCollaborators] = useState([])
 
@@ -56,12 +56,22 @@ function App() {
     console.log('Deletando colaborador')
 }
 
+  function changeColor (props) {
+    setTimes(times.map(time =>  {
+      if (time.nome === props.nome) {
+        props.secondaryColor = time.cor
+      }
+      return time
+    }))
+  }
+
   return (
     <div className="App">
       <Banner />
       <Forms times={times.map(time => time.nome)} toTheRegisteredEmployee={collaborator => toNewCollaboratorAdd(collaborator)} />
 
       {times.map(time => <Time 
+      mudarCor={changeColor}
       key={time.nome} 
       nome={time.nome} 
       primaryColor={time.primaryColor} 
