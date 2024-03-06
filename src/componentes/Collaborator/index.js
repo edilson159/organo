@@ -2,7 +2,6 @@ import { AiFillCloseCircle } from "react-icons/ai";
 import './Collaborator.css'
 
 const CardCollaborator = (props, time, corDeFundo) => { 
-    const color = {backgroundColor: time.primaryColor}
     return (
         <div className='collaborator'>
             <AiFillCloseCircle size={25} className='delete' onClick={props.toDeleted} />

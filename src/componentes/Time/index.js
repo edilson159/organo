@@ -9,7 +9,7 @@ const Time = (props, time, ) => {
 
     return (
         (props.collaborators.length > 0) ? <section className="time" style={color} >
-            <input  onChange={event => props.mudarCor(event.target.value, props.nome)} value={props.secondaryColor} type="color" className="input-color" />
+            <input  onChange={event => props.mudarCor(event.target.value, props.nome)} value={props.primaryColor} type="color" className="input-color" />
             <h3 style={border}>{props.nome}</h3>
             <div className="collaborators">
         {props.collaborators.map(Collaborator => {
