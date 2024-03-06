@@ -45,7 +45,34 @@ function App() {
     }
   ])
 
-  const [collaborators, setCollaborators] = useState([])
+  const listHome = [
+    {
+      nome:'Edilson Silva',
+      cargo:'Desenvolvedor Junior',
+      imagem:'https...',
+      time: times[0].nome
+    },
+    {
+      nome:'Enilson Silva',
+      cargo:'Desenvolvedor Sênior',
+      imagem:'https...',
+      time: times[0].nome
+    },
+    {
+      nome:'Eoise Kevilly',
+      cargo:'Desenvolvedora Junior',
+      imagem:'https',
+      time: times[0].nome
+    },
+    {
+      nome:'Bruno José',
+      cargo:'Web Desgin',
+      imagem:'https..',
+      time: times[0].nome
+    },
+  ]
+
+  const [collaborators, setCollaborators] = useState(listHome)
 
   const toNewCollaboratorAdd = (collaborator) => {
     console.log(collaborator);
@@ -56,10 +83,10 @@ function App() {
     console.log('Deletando colaborador')
 }
 
-  function changeColor (cor, nome) {
+  function changeColor (cor, nome,) {
     setTimes(times.map(time =>  {
       if (time.nome === nome) {
-        time.secondaryColor = cor
+        time.primaryColor = cor
       }
       return time
     }))
