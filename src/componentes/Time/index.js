@@ -1,7 +1,7 @@
 import CardCollaborator from "../Collaborator";
 import "./Time.css";
 
-const Time = (props, time) => {
+const Time = (props, time, ) => {
 
     const color = {backgroundColor: props.secondaryColor, backgroundImage: 'url(/imagens/fundo.png'}
 
@@ -9,7 +9,7 @@ const Time = (props, time) => {
 
     return (
         (props.collaborators.length > 0) ? <section className="time" style={color} >
-            <input value={props.secondaryColor} onChange={event => props.changeColor(event.target.value, time.nome)} type="color" className="input-color" />
+            <input  onChange={event => props.mudarCor(event.target.value, time.nome)} value={props.secondaryColor} type="color" className="input-color" />
             <h3 style={border}>{props.nome}</h3>
             <div className="collaborators">
         {props.collaborators.map(Collaborator => {

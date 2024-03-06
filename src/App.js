@@ -56,10 +56,10 @@ function App() {
     console.log('Deletando colaborador')
 }
 
-  function changeColor (props) {
+  function changeColor (cor, nome) {
     setTimes(times.map(time =>  {
-      if (time.nome === props.nome) {
-        props.secondaryColor = time.cor
+      if (time.nome === nome) {
+        time.secondaryColor = cor
       }
       return time
     }))
@@ -83,5 +83,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;
